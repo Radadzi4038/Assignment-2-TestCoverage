@@ -16,8 +16,8 @@ test("throws error when coverage per liter is negative", () => {
 });
 
 test("calculates correctly with decimal area and coverage", () => {
-  const result = paintRequiredCalculator(22, 11);
-  expect(result).toBeCloseTo(2.0); 
+  const result = paintRequiredCalculator(22.8, 11.4);
+  expect(result).toBeCloseTo(2.0); // 22.8 ÷ 11.4 = 2
 });
 
 });
