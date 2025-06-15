@@ -15,4 +15,9 @@ test("throws error when coverage per liter is negative", () => {
   expect(() => paintRequiredCalculator(100, -5)).toThrow("Coverage per liter must be greater than zero");
 });
 
+test("calculates correctly with decimal area and coverage", () => {
+  const result = paintRequiredCalculator(22, 11);
+  expect(result).toBeCloseTo(2.0); 
+});
+
 });
