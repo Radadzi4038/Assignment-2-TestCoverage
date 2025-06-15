@@ -8,7 +8,7 @@ describe("calculateCanvasSize", () => {
   })
 
   test("should return 0 if one side is 0", () => {
-  expect(calculateCanvasSize("0", "10")).toBe(10);
+  expect(calculateCanvasSize("0", "10")).toBe(0);
 });
 
 }
