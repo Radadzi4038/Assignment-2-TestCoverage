@@ -16,7 +16,7 @@ describe("calculateCanvasSize", () => {
   });
 
   test("handles very large dimensions correctly", () => {
-  const result = calculateCanvasSize("10", "10000");
+  const result = calculateCanvasSize("10000", "10000");
   expect(result).toEqual(100000000);
 });
 }
