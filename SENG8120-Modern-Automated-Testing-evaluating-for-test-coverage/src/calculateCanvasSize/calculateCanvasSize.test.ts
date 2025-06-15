@@ -6,4 +6,11 @@ describe("calculateCanvasSize", () => {
 
     expect(result).toEqual(1000);
   })
+
+  test("should return 0 if one side is 0", () => {
+  expect(calculateCanvasSize("0", "10")).toBe(10);
 });
+
+}
+
+);
