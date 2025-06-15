@@ -20,6 +20,11 @@ describe("calculateCanvasSize", () => {
     expect(result).toEqual(100000000);
   });
 
+  test("handles decimal string inputs correctly", () => {
+    const result = calculateCanvasSize("10.5", "2");
+    expect(result).toEqual(21); // parseInt("10.5") to 10, 10 * 2 = 20
+  });
+
 }
 
 );
