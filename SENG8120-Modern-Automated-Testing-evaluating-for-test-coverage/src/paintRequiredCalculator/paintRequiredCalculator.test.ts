@@ -12,7 +12,7 @@ describe("paint required calculator", () => {
 });
 
 test("throws error when coverage per liter is negative", () => {
-  expect(() => paintRequiredCalculator(100, 5)).toThrow("Coverage per liter must be greater than zero");
+  expect(() => paintRequiredCalculator(100, -5)).toThrow("Coverage per liter must be greater than zero");
 });
 
 });
