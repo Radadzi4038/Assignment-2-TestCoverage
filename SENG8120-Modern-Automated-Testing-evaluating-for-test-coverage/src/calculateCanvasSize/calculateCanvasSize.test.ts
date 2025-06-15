@@ -14,6 +14,11 @@ describe("calculateCanvasSize", () => {
   test("should throw an error if input is not a number", () => {
     expect(() => calculateCanvasSize("abc", "10")).toThrow("Invalid input");
   });
+
+  test("handles very large dimensions correctly", () => {
+  const result = calculateCanvasSize("10", "10000");
+  expect(result).toEqual(100000000);
+});
 }
 
 );
