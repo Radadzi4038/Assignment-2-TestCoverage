@@ -1,59 +1,69 @@
-# SENG8120 Modern Automated Testing 
+# Assignment 2 – Evaluating and Improving Test Coverage
 
-## Purpose
+# Overview
+This project is part of SENG8120 - Modern Automated Testing.  
+The objective is to analyze, improve, and test existing TypeScript code using Test-Driven Development (TDD) principles and Git best practices.
 
-This repository houses the code we require for examples and assignments.
+# Test Summary
+- Tests have been added for both core modules to ensure thorough handling of edge cases and normal inputs.
 
-## Repository Usage
+# 'calculateCanvasSize.test.ts'
+- Returns correct result for valid input.
+- Handles zero dimensions.
+- Throws error for non-numeric input.
+- Handles very large dimension values.
+- Parses decimal strings properly (via ‘parseInt ‘logic).
 
-This repository will contain branches of code.
+# 'paintRequiredCalculator.test.ts'
+- Returns correct paint required for given area and coverage.
+- Throws error if coverage is `0` (invalid).
+- Throws error for negative coverage values.
+- Handles decimal inputs correctly with `toBeCloseTo`.
 
-Please refer to your instructor's directions on how to use this repository.
+# Refactored Production Code
 
-## Branch Usage
+# 'calculateCanvasSize.ts'
+- Now includes input validation and throws an error if either input is not a valid number.
 
-**Installing The Dependencies**
+# 'paintRequiredCalculator.ts'
+- Includes a safety check to prevent division by zero or negative values, and throws appropriate errors.
 
-You will need to install dependencies by using:
+# 'main.ts'
+- Wrapped logic in a 'try/catch' block.
+- Added error logging for user-friendly output.
+- Output now shows paint required rounded to 2 decimal places for clarity.
 
+# How to Run the Project
+
+# Install dependencies:
 ```bash
 npm install
-```
 
-**Running The Project**
-
-To run the project, you must first build the project:
-
-```bash
+Build the project (optional if applicable):
+bash
 npm run build
-```
 
-followed by:
-
-```bash
+Start the program:
+bash
 npm start
-```
 
-Note:  if you make a change in the production code, you must `build` & `start`.
-Otherwise, your changes will not be reflected.
-
-**Running The Tests**
-
-To run the tests, you can use
-
-```bash
+Running Tests
+Run all tests:
+bash
 npm run test
-```
 
-To keep the tests running, you can use
-
-```bash
+Watch mode (for continuous testing):
+bash
 npm run test -- --watch
-```
 
-To run a specific test, you can use
+# 'Developer Notes'
+- All tests follow TDD principles.
+- The code was improved before and during test creation.
+- Refactoring was based on analysis of inputs and error conditions.
+- Git commits were made per test.
 
-```bash
-npm run test [my test name]
-```
+# 'Author'
+-Created by: Richmond Adadzi
+= Submitted for SENG8120 – Modern Automated Testing
 
+Repository: https://github.com/Radadzi4038/Assignment-2-TestCoverage.git
